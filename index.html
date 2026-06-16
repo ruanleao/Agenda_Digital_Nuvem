@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Gerenciamento de Contatos</h1>
+
+        <section class="busca-section">
+            <h2>Busca</h2>
+            <div class="form-group-inline">
+                <label for="buscaNome">Nome:</label>
+                <input type="text" id="buscaNome" placeholder="Digite o nome para busca...">
+                <button id="btnBuscar">Buscar</button>
+            </div>
+            <button id="btnNovo" class="btn-primary">Novo</button>
+        </section>
+
+        <section class="formulario-section">
+            <h2 id="formTitulo">Novo Contato</h2>
+            <form id="formContato">
+    <input type="hidden" id="contatoId">
+
+   <div class="form-group">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" pattern="[A-Za-zÀ-ÿ\s]+" title="Apenas letras e espaços são permitidos" required>
+   </div>
+
+    <div class="form-row">
+     <div class="form-group">
+      <label for="telefone">Fone:</label>
+      <input type="tel" id="telefone" pattern="[\d\(\)\+\-\s]+" title="Permitido apenas números, espaços e os símbolos + ( ) -" required>
+    </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+    <div class="form-group">
+      <label for="dtNascimento">Data de Nascimento:</label>
+      <input type="date" id="dtNascimento" required>
+    </div>
+    <div class="form-group">
+        <label for="obs">Obs:</label>
+        <input type="text" id="obs" placeholder="Ex: Cliente preferencial">
+    </div>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" id="btnSalvar">Salvar</button>
+        <button type="button" id="btnCancelar">Cancelar</button>
+    </div>
+        </form>
+        </section>
+
+        <section class="listagem-section">
+            <table>
+            <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
+        <th>Data Nasc.</th>
+        <th>Obs</th>
+        <th>Ações</th>
+    </tr>
+             </thead>
+                <tbody id="tabelaContatos">
+                 </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

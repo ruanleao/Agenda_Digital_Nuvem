@@ -1,0 +1,11 @@
+# Ficheiros do sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configurações do editor de código (VS Code / WebStorm)
+.vscode/
+.idea/
+
+# Ficheiros temporários de extensões (como o Live Server)
+.live-server*

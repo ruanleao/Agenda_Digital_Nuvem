@@ -1,0 +1,206 @@
+/* Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #111;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Estilo Geral de Seções */
+section {
+    margin-bottom: 35px;
+}
+
+/* Elementos de Formulário */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #0066cc;
+}
+
+/* Seção do Formulário de Cadastro */
+.formulario-section {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+#formTitulo {
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+
+  /* BOTÕES: Estilizações e Efeitos de Clique */
+
+button {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    transition: background-color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
+    user-select: none; /* Impede a seleção acidental do texto do botão ao clicar rápido */
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    background-color: #e5e5e5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Efeito de Clique no Botão */
+button:active {
+    transform: scale(0.96); /* Diminui o tamanho em 4% no momento do clique */
+    background-color: #d8d8d8;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Cria uma sombra interna de profundidade */
+}
+
+#btnBuscar, #btnNovo {
+    padding: 6px 14px;
+}
+
+#btnSalvar {
+    background-color: #e5e5e5;
+    color: #000;
+    font-weight: bold;
+}
+
+#btnSalvar:hover {
+    background-color: #d8d8d8;
+}
+
+#btnSalvar:active {
+    background-color: #cccccc;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Tabela de Listagem */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 12px;
+}
+
+th {
+    border-bottom: 2px solid #222;
+    font-weight: bold;
+}
+
+td {
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover td {
+    background-color: #fafafa;
+}
+
+/* Botões de Ação na Tabela (Lápis e Lixeira) */
+.btn-acao {
+    background: none;
+    border: none;
+    padding: 4px;
+    margin-right: 5px;
+    font-size: 1.1rem;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.btn-acao:hover {
+    background: none;
+    transform: scale(1.15); /* Aumenta ligeiramente ao passar o mouse */
+}
+
+/* Efeito de Clique nos ícones da tabela */
+.btn-acao:active {
+    transform: scale(0.85); /* Encolhe bem quando clicado */
+    opacity: 0.7;
+}
+
+.btn-editar {
+    color: #222;
+}
+
+.btn-excluir {
+    color: #cc0000;
+}
