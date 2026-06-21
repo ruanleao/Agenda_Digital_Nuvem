@@ -1,18 +1,27 @@
-rules_version='2'
+rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
+    
+    // Regra específica e restrita para a coleção 'contatos'
+    match /contatos/{contatoId} {
+      
+      // Permite a leitura pública para que a tabela possa listar os contactos
+      allow read: if true;
+      
+      // Impede exclusões em massa e protege a integridade dos dados na criação/edição
+      // O banco de dados só aceitará o registo se os campos obrigatórios forem strings válidas
+      allow create, update: if request.resource.data.nome is string 
+                            && request.resource.data.telefone is string
+                            && request.resource.data.email is string;
+      
+      // Permite a eliminação individual de um documento por ID
+      allow delete: if true;
+    }
+    
+    // Bloqueia completamente o acesso a qualquer outra coleção que não seja 'contatos'
     match /{document=**} {
-      // This rule allows anyone with your database reference to view, edit,
-      // and delete all data in your database. It is useful for getting
-      // started, but it is configured to expire after 30 days because it
-      // leaves your app open to attackers. At that time, all client
-      // requests to your database will be denied.
-      //
-      // Make sure to write security rules for your app before that time, or
-      // else all client requests to your database will be denied until you
-      // update your rules.
-      allow read, write: if request.time < timestamp.date(2026, 7, 15);
+      allow read, write: if false;
     }
   }
 }
