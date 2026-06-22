@@ -3,7 +3,7 @@
 **Disciplina:** Aplicação de Banco de Dados
 **Atividade:** Desenvolvimento de Aplicação em Nuvem (3 pontos)
 **Modalidade:** Individual
-**Aluno:** Ruan Leão
+**Aluno:** Ruan William Leão dos Santos
 
 ---
 
